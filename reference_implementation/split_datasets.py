@@ -1,5 +1,5 @@
 """
-Splits the multigrid and adapt_grid datasets into train, validation and test sets (80/10/10). Multigrid datasets are
+Splits the multigrid and adapt_grid datasets into train, validation and test sets (70/15/15). Multigrid datasets are
 split by topology (general/grid_graph), so all simulations of a topology are in the same set. Adapt_grid datasets are
 split randomly by simulation. Writes one file per dataset to OUTPUT_PATH, <subset>-<grid>.csv with the columns sim_idx
 (as in labels/labels.csv; the result file is data/result<sim_idx>.csv) and split (train, val or test).
@@ -26,8 +26,8 @@ for dataset in DATASETS:
 
     # the units that are split: topologies (multigrid) or single simulations (adapt_grid)
     units = labels["general/grid_graph"] if dataset.startswith("multi_grid") else labels["general/sim_idx"]
-    train, rest = train_test_split(units.unique(), test_size=0.2, random_state=SEED)
-    val, test = train_test_split(rest, test_size=0.5, random_state=SEED)
+    train, rest = train_test_split(units.unique(), test_size=0.3, random_state=SEED)  # 70 % train
+    val, test = train_test_split(rest, test_size=0.5, random_state=SEED)  # 15 % val, 15 % test
 
     split = pd.DataFrame({"sim_idx": labels["general/sim_idx"], "split": "train"})
     split.loc[units.isin(val), "split"] = "val"

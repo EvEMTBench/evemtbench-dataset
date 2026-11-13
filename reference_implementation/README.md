@@ -6,7 +6,7 @@ extracted, e.g. `<datasets>/multi_grid/Template110kV` with `data/`, `graphs/` an
 
 ## Dataset splits
 
-`split_datasets.py` splits every multigrid and adapt_grid dataset 80/10/10 into train, validation and test (seed 0):
+`split_datasets.py` splits every multigrid and adapt_grid dataset 70/15/15 into train, validation and test (seed 0):
 multigrid by topology (`general/grid_graph`), adapt_grid by simulation. Benchmark datasets are meant for testing only.
 The result is `splits/<subset>-<grid>.csv` with the columns `sim_idx` and `split` (`train`, `val`, `test`); the files
 are included.
