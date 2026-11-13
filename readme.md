@@ -5,12 +5,17 @@ operations, short circuits, high-impedance and incipient faults) in grids from 2
 DIgSILENT PowerFactory. This repository contains the code that generated the dataset and a minimal reference
 implementation, that can be used as an example on how to use the data.
 
-- **Data:** TODO (link / DOI). One archive per dataset (`<subset>-<grid>.tar.gz`, subsets `multi_grid`, `adapt_grid`,
+- **Data:** FAUDataCloud, https://doi.org/10.48742/fau.3383-vd93. One archive per dataset (`<subset>-<grid>.tar.gz`, subsets `multi_grid`, `adapt_grid`,
   `benchmark`), each with `data/result<sim_idx>.csv` (voltages and currents, 9.6 kHz), `graphs/` (grid graph as
   networkx pickle and PowerFactory `.pfd`) and `labels/labels.csv` (one row per simulation: operating state, event and
   file references).
-- **Paper:** TODO.
-- **Licence:** TODO.
+- **Code archive:** Zenodo, https://doi.org/10.5281/zenodo.21624649 (the released dataset was generated with version
+  V1.0).
+- **Paper:** Kordowich, G. et al. *A simulation based dataset of faults and events for machine learning in power
+  systems* (submitted to Scientific Data).
+- **Licence:** code CC0 1.0 Universal (see `LICENSE`), data CC BY 4.0. The grid models `models/CigreMVGrid.pfd` and
+  `models/IEEE39BusSystem.pfd` are based on the PowerFactory application examples "MV Microgrid" and "39 Bus New
+  England System" by DIgSILENT GmbH, which permitted their publication.
 
 ## Repository structure
 
