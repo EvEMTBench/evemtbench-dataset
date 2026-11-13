@@ -1,0 +1,9 @@
+# Data generation (Python 3.9 interpreter used by PowerFactory 2025 SP4).
+# pandas and flatten-json must also be importable by PowerFactory's Python, as it executes util/parallel_sim_handler.py.
+numpy==2.0.2
+pandas==2.3.3
+networkx==3.2.1
+flatten-json==0.1.14
+tqdm==4.67.3
+# reference_implementation/ (only needs numpy, pandas, networkx, tqdm and scikit-learn; no PowerFactory)
+scikit-learn==1.6.1

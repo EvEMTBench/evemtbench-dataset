@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# default output folders of create_datasets.py (--data_dir, --not_released_dir)
+/datasets/
+/datasets_not_released/
